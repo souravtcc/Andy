@@ -230,6 +230,20 @@ a {
     6px 8px 0 rgba(23, 18, 11, 0.15);
 }
 
+.hero h3 {
+  max-width: 580px;
+  color: var(--ink);
+  font-family: var(--body-font);
+  font-size: clamp(1.05rem, 1.45vw, 1.35rem);
+  font-style: normal;
+  font-weight: 950;
+  line-height: 1.18;
+  text-transform: none;
+  transform: none;
+  -webkit-text-stroke: 0;
+  text-shadow: 2px 2px 0 rgba(255, 255, 255, 0.34);
+}
+
 .hero .eyebrow {
   margin: 0 0 16px;
 }
@@ -313,30 +327,37 @@ a {
 }
 
 .contract-box {
-  width: min(620px, 100%);
-  min-height: 78px;
-  margin-top: 28px;
+  position: relative;
+  width: min(590px, 100%);
+  min-height: 76px;
+  margin-top: 24px;
   display: grid;
   grid-template-columns: auto minmax(0, 1fr) auto;
   align-items: center;
-  gap: 14px;
-  padding: 14px 16px;
+  gap: 12px;
+  padding: 12px 14px;
   color: var(--ink);
-  background: var(--cream);
-  border: 5px solid var(--ink);
-  border-radius: 18px;
-  box-shadow: 8px 10px 0 rgba(23, 18, 11, 0.28);
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.62), transparent 34%),
+    linear-gradient(180deg, #ffe87b, #ffc72e);
+  border: 4px solid var(--brown);
+  border-radius: 999px;
+  box-shadow:
+    0 7px 0 rgba(109, 74, 0, 0.45),
+    0 0 0 2px rgba(255, 255, 255, 0.32) inset;
+  overflow: hidden;
 }
 
 .contract-label {
-  width: 52px;
+  width: 54px;
   aspect-ratio: 1;
   display: grid;
   place-items: center;
-  color: var(--ink);
-  background: linear-gradient(180deg, #ffd849, #ffb900);
-  border: 4px solid var(--ink);
-  border-radius: 10px;
+  color: var(--white);
+  background: linear-gradient(180deg, #2f2612, #17120b);
+  border: 3px solid rgba(255, 255, 255, 0.76);
+  border-radius: 50%;
+  box-shadow: 0 4px 0 rgba(109, 74, 0, 0.38);
   font-family: var(--display-font);
   font-style: italic;
   font-size: 1.35rem;
@@ -348,9 +369,9 @@ a {
   min-width: 0;
   overflow: hidden;
   color: var(--ink);
-  font-family: var(--display-font);
-  font-style: italic;
-  font-size: clamp(0.88rem, 1.45vw, 1.22rem);
+  font-family: "Trebuchet MS", "Arial Rounded MT Bold", system-ui, sans-serif;
+  font-style: normal;
+  font-size: clamp(0.78rem, 1.12vw, 1rem);
   font-weight: 950;
   letter-spacing: 0;
   text-overflow: ellipsis;
@@ -364,11 +385,11 @@ a {
   justify-content: center;
   gap: 8px;
   padding: 0 18px;
-  color: var(--white);
-  background: #07080d;
-  border: 3px solid var(--ink);
-  border-radius: 12px;
-  box-shadow: 0 5px 0 rgba(23, 18, 11, 0.28);
+  color: var(--ink);
+  background: var(--cream);
+  border: 3px solid var(--brown);
+  border-radius: 999px;
+  box-shadow: 0 5px 0 rgba(109, 74, 0, 0.32);
   cursor: pointer;
   font-family: var(--display-font);
   font-style: italic;
@@ -389,12 +410,12 @@ a {
 
 .copy-ca:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 0 rgba(23, 18, 11, 0.28);
+  box-shadow: 0 8px 0 rgba(109, 74, 0, 0.32);
 }
 
 .copy-ca.is-copied {
-  color: var(--ink);
-  background: var(--yellow);
+  color: var(--white);
+  background: var(--brown);
 }
 
 .hero-art {
@@ -452,6 +473,13 @@ a {
   opacity: 0.82;
   transform: translate(-72px, 68px) rotateY(18deg) rotateX(-4deg) translateZ(-30px) scale(0.82);
   filter: saturate(1.15);
+}
+
+@media (min-width: 621px) {
+  .hero-card-back {
+    opacity: 0;
+    transform: translate(-24px, 64px) rotateY(8deg) rotateX(-2deg) translateZ(-80px) scale(0.72);
+  }
 }
 
 .coin-orbit {
