@@ -1394,11 +1394,26 @@ a {
   }
 
   .hero h1,
-  .hero h2,
-  .hero h3 {
+  .hero h2 {
     max-width: 100%;
     font-size: clamp(1.55rem, 8.5vw, 2.85rem);
     line-height: 0.98;
+  }
+
+  .hero h3 {
+    max-width: 100%;
+    font-size: clamp(1.28rem, 6.2vw, 1.85rem);
+    line-height: 1.08;
+    font-weight: 950;
+    text-shadow: 1px 2px 0 rgba(255, 255, 255, 0.42);
+  }
+
+  .section-inner h2,
+  .brand-text,
+  .eyebrow {
+    text-shadow:
+      3px 4px 0 #5f4300,
+      6px 7px 0 rgba(95, 67, 0, 0.18);
   }
 
   .gallery-copy h2 {
@@ -1407,8 +1422,8 @@ a {
     margin-bottom: 22px;
     -webkit-text-stroke: 2px var(--ink);
     text-shadow:
-      4px 5px 0 var(--ink),
-      7px 8px 0 rgba(23, 18, 11, 0.16);
+      3px 4px 0 #5f4300,
+      6px 7px 0 rgba(95, 67, 0, 0.18);
   }
 
   .gallery-button {
@@ -1435,25 +1450,37 @@ a {
     gap: 10px;
     margin-top: 22px;
     padding: 12px;
-    border-width: 4px;
-    border-radius: 14px;
+    border-width: 3px;
+    border-radius: 18px;
+    background:
+      linear-gradient(135deg, rgba(255, 255, 255, 0.7), transparent 42%),
+      linear-gradient(180deg, #fff1a0, #ffd03d);
+    box-shadow: 0 6px 0 rgba(109, 74, 0, 0.34);
   }
 
   .contract-label {
     width: 44px;
-    border-width: 3px;
-    border-radius: 9px;
+    color: var(--ink);
+    background: linear-gradient(180deg, #ffe77b, #ffc31c);
+    border: 3px solid var(--brown);
+    border-radius: 12px;
+    box-shadow: 0 3px 0 rgba(109, 74, 0, 0.26);
     font-size: 1.05rem;
   }
 
   .contract-box code {
-    font-size: 0.9rem;
+    font-size: 0.84rem;
+    line-height: 1.1;
   }
 
   .copy-ca {
     grid-column: 1 / -1;
     min-height: 46px;
     width: 100%;
+    color: var(--brown);
+    background: linear-gradient(180deg, #fffced, #fff1b0);
+    border-color: var(--brown);
+    box-shadow: 0 4px 0 rgba(109, 74, 0, 0.24);
   }
 
   .meme-stage {
