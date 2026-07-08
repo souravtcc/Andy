@@ -13,10 +13,10 @@ document.querySelectorAll(".nav-links a").forEach((link) => {
   });
 });
 
-document.querySelectorAll("[data-copy-target]").forEach((button) => {
+document.querySelectorAll("[data-copy-target], [data-copy-text]").forEach((button) => {
   button.addEventListener("click", async () => {
     const target = document.getElementById(button.dataset.copyTarget);
-    const text = target?.textContent?.trim();
+    const text = button.dataset.copyText || target?.textContent?.trim();
 
     if (!text) return;
 
